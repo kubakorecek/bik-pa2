@@ -1,25 +1,21 @@
 
-class Complex{
-    private:
-        double m_RealPart;
-        double m_ComplexPart;
-        
+#include "complex_number.h"
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-    public:
-         Complex( void );
-         Complex( double const & real_part, double const & complex_part);
-         Complex( double const & real_part);
-         void Abs();
-         
-         static Complex Add(Complex & a, Complex & b);
-         static Complex Subtract(Complex & a, Complex & b);
-         static Complex Multiply(Complex & a, Complex & b);
-         static Complex Divide(Complex & a, Complex & b);
+Complex::Complex(){
+    m_ComplexPart=0;
+    m_RealPart=0;
+}
+Complex::Complex(double const &real_part){
+    m_RealPart = real_part;
+}
+Complex::Complex(double const &real_part,double const &complex_part){
+m_RealPart = real_part;
+m_ComplexPart = complex_part;
+}
+void Complex::Abs(){
+    cout<<"Absolute value is:"<<sqrt(pow(m_ComplexPart,2)+pow(m_RealPart,2))<<endl;
+}
 
-         static Complex Compare(Complex & a, Complex & b);
-
-
-         
-         
-         
-};
