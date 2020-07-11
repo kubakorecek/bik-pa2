@@ -11,7 +11,10 @@ class Complex{
          Complex( void );
          Complex( double const & real_part, double const & complex_part);
          Complex( double const & real_part);
+         void m_print();
          void Abs();
+         double getRealPart() const;
+         double getImaginaryPart() const;
          
          static Complex Add(Complex & a, Complex & b);
          static Complex Subtract(Complex & a, Complex & b);
